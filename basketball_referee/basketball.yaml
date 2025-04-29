@@ -1,0 +1,33 @@
+# Dataset configuration for basketball detection
+path: ../datasets/basketball  # Path to dataset
+train: images/train  # Training images
+val: images/val  # Validation images
+
+# Classes
+names:
+  0: basketball
+  1: player
+
+# Model configuration
+nc: 2  # Number of classes
+depth_multiple: 0.33  # Model depth multiple
+width_multiple: 0.25  # Layer channel multiple
+
+# Training parameters
+batch: 16
+epochs: 100
+imgsz: 640
+patience: 50
+device: 0  # GPU device
+
+# Data augmentation
+augment: True
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.0 
